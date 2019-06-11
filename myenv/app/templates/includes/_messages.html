@@ -1,0 +1,8 @@
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <!-- a categoria é como vai aparecer o aviso na tela com classe do bootstrap, sucsess ou dandger pra aparecer em vermelho-->
+      <div class="alert alert-{{ category }}">{{ message }}<div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
